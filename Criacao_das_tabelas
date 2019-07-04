@@ -1,0 +1,156 @@
+//TODAS AS TABELAS FORAM CRIADAS COM SUCESSO
+
+CREATE TABLE Genero(
+	id_genero int CONSTRAINT pk_id_genero PRIMARY KEY,
+	nome varchar2(150),
+	descricao varchar2(500),
+	sub_grupo varchar2(300)
+);
+
+CREATE TABLE Tipo(
+	id_tipo int CONSTRAINT pk_id_tipo PRIMARY KEY,
+	nome varchar2(150),
+	descricao varchar2(300)
+):
+
+CREATE TABLE Editora(
+	id_editora int CONSTRAINT pk_id_editora PRIMARY KEY,
+	nome varchar2(150),
+	pais varchar2(100),
+	cidade varchar2(150)
+);
+
+CREATE TABLE Autor(
+	id_autor int CONSTRAINT pk_id_autor PRIMARY KEY,
+	data_nascimento date,
+	nome varchar2(150),
+	nacionalidade varchar2(150)
+);
+
+CREATE TABLE Dono_Locatario(
+	id_dono_locatario int CONSTRAINT pk_id_dono_locatario PRIMARY KEY,
+	data_nascimento date,
+	nome varchar2(150),
+	tipo_pessoa int
+);
+
+CREATE TABLE Tradutor(
+	id_tradutor int CONSTRAINT pk_id_tradutor PRIMARY KEY,
+	nome varchar2(150)
+);
+
+CREATE TABLE Grafica(
+	id_grafica int CONSTRAINT pk_id_grafica PRIMARY KEY,
+	nome varchar2(200)
+);
+
+CREATE TABLE Livro(
+	id_livro int CONSTRAINT pk_id_livro PRIMARY KEY,
+	fisico_ou_digital int,
+	nome varchar2(400),
+	volume int,
+	ano int,
+	lido int,
+	preco_pago float,
+	qtd_exemplares int,
+	numero_impressao int,
+	tipo_papel varchar2(150),
+	plataforma varchar2(250),
+	forma_adquirida varchar2(300),
+	data_aquisicao date,
+	grafica int,
+	tipo int,
+	editora int,
+	dono int
+);
+
+ALTER TABLE Livro ADD CONSTRAINT fk_livro_grafica FOREIGN KEY(grafica)
+REFERENCES Grafica(id_grafica);
+
+ALTER TABLE Livro ADD CONSTRAINT fk_livro_tipo FOREIGN KEY(tipo)
+REFERENCES Tipo(id_tipo);
+
+ALTER TABLE Livro ADD CONSTRAINT fk_livro_editora FOREIGN KEY(editora)
+REFERENCES Editora(id_editora);
+
+ALTER TABLE Livro ADD CONSTRAINT fk_livro_dono FOREIGN KEY(dono)
+REFERENCES Dono_Locatario(id_dono_locatario);
+
+CREATE TABLE Livro_Genero(
+	livro_id int,
+	genero_id int,
+	CONSTRAINT pk_livro_genero PRIMARY KEY(livro_id,genero_id)
+);
+
+ALTER TABLE Livro_Genero ADD CONSTRAINT fk_livro_genero_livro FOREIGN KEY(livro_id)
+REFERENCES Livro(id_livro);
+
+ALTER TABLE Livro_Genero ADD CONSTRAINT fk_livro_genero_genero FOREIGN KEY(genero_id)
+REFERENCES Genero(id_genero);
+
+
+
+CREATE TABLE Livro_Autor(
+	livro_id int,
+	autor_id int,
+	CONSTRAINT pk_livro_id_autor_id PRIMARY KEY(livro_id,autor_id)
+);
+
+ALTER TABLE Livro_Autor ADD CONSTRAINT fk_livro_autor_livro FOREIGN KEY(livro_id)
+REFERENCES Livro(id_livro);
+
+ALTER TABLE Livro_Autor ADD CONSTRAINT fk_livro_autor_autor FOREIGN KEY(autor_id)
+REFERENCES Autor(id_autor);
+
+CREATE TABLE Livro_Tradutor(
+	livro_id int,
+	tradutor_id int,
+	CONSTRAINT pk_livro_id_tradutor_id PRIMARY KEY(livro_id,tradutor_id)
+);
+
+ALTER TABLE Livro_Tradutor ADD CONSTRAINT fk_livro_tradutor_livro FOREIGN KEY(livro_id)
+REFERENCES Livro(id_livro);
+
+ALTER TABLE Livro_Tradutor ADD CONSTRAINT fk_livro_tradutor_tradutor FOREIGN KEY(tradutor_id)
+REFERENCES Tradutor(id_tradutor);
+
+CREATE TABLE Locacao(
+	livro_id int,
+	locatario_id int,
+	devolveu int,
+	data_pegou date,
+	data_devolveu date,
+	CONSTRAINT pk_livro_id_locatario_id PRIMARY KEY(livro_id,locatario_id)
+);
+
+ALTER TABLE Locacao ADD CONSTRAINT fk_locacao_livro FOREIGN KEY(livro_id)
+REFERENCES Livro(id_livro);
+
+ALTER TABLE Locacao ADD CONSTRAINT fk_locacao_locatario FOREIGN KEY(locatario_id)
+REFERENCES Dono_Locatario(id_dono_locatario);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

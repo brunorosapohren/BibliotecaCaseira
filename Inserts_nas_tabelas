@@ -1,0 +1,111 @@
+//INSERIR PELO MENOS 3 CAMPOS EM CADA TABELA	
+//TUDO FOI CRIADO, TODAS AS TABELAS POSSUEM ALGUMA INFORMAÇÃO
+INSERT INTO () VALUES();
+
+//Tipo
+CREATE SEQUENCE tipo_sequencia;
+INSERT INTO Tipo(id_tipo,nome,descricao) VALUES(,'','');
+
+INSERT INTO Tipo(id_tipo,nome,descricao) VALUES(tipo_sequencia.nextval,'Enciclopédia','Assuntos específicos tratados de modo a informar.');
+INSERT INTO Tipo(id_tipo,nome,descricao) VALUES(2,'Narrativa','Discorrimentos de histórias.');
+INSERT INTO Tipo(id_tipo,nome,descricao) VALUES(3,'Romance','.');
+
+//Editora
+CREATE SEQUENCE editora_sequencia;
+INSERT INTO Editora(id_editora,nome,pais,cidade) VALUES(,'','','');
+
+INSERT INTO Editora(id_editora,nome,pais,cidade) VALUES(editora_sequencia.nextval,'Companhia das Letras','Brasil','São Paulo');
+INSERT INTO Editora(id_editora,nome,pais,cidade) VALUES(editora_sequencia.nextval,'Editora Globo','Brasil','Porto Alegre');
+
+//Gênero
+CREATE SEQUENCE genero_sequencia;
+
+INSERT INTO Genero(id_genero,nome,descricao,sub_grupo) VALUES(,'','','');
+
+INSERT INTO Genero(id_genero,nome,descricao,sub_grupo) VALUES(genero_sequencia.nextval,'Gênero Lírico','Na  modalidade lírica o poeta exprime seus sentimentos mais íntimos, as emoções que povoam seu universo interior. E o faz através do ritmo, da melodia que embala os versos. As palavras ganham uma intensa sonoridade.','Poesia');
+INSERT INTO Genero(id_genero,nome,descricao,sub_grupo) VALUES(genero_sequencia.nextval,'Gênero Narrativo','o gênero narrativo o autor estrutura uma história, quase sempre em prosa, que pode se inspirar em eventos reais ou ser apenas de natureza fictícia. Nessa modalidade as cenas se desenrolam de forma consecutiva no espaço e no tempo. Esta modalidade se distingue, estruturalmente, por apresentar uma trama com início, um clímax e uma conclusão.','Romance');
+INSERT INTO Genero(id_genero,nome,descricao,sub_grupo) VALUES(genero_sequencia.nextval,'Gênero Dramático','As obras que se filiam a este gênero são especialmente criadas para serem exibidas em montagens teatrais.','Tragédia');
+INSERT INTO Genero(id_genero,nome,descricao,sub_grupo) VALUES(genero_sequencia.nextval,'Gênero Narrativo','o gênero narrativo o autor estrutura uma história, quase sempre em prosa, que pode se inspirar em eventos reais ou ser apenas de natureza fictícia. Nessa modalidade as cenas se desenrolam de forma consecutiva no espaço e no tempo. Esta modalidade se distingue, estruturalmente, por apresentar uma trama com início, um clímax e uma conclusão.','Conto');
+INSERT INTO Genero(id_genero,nome,descricao,sub_grupo) VALUES(genero_sequencia.nextval,'Gênero Narrativo','o gênero narrativo o autor estrutura uma história, quase sempre em prosa, que pode se inspirar em eventos reais ou ser apenas de natureza fictícia. Nessa modalidade as cenas se desenrolam de forma consecutiva no espaço e no tempo. Esta modalidade se distingue, estruturalmente, por apresentar uma trama com início, um clímax e uma conclusão.','Crônica');
+INSERT INTO Genero(id_genero,nome,descricao,sub_grupo) VALUES(genero_sequencia.nextval,'Gênero Narrativo','o gênero narrativo o autor estrutura uma história, quase sempre em prosa, que pode se inspirar em eventos reais ou ser apenas de natureza fictícia. Nessa modalidade as cenas se desenrolam de forma consecutiva no espaço e no tempo. Esta modalidade se distingue, estruturalmente, por apresentar uma trama com início, um clímax e uma conclusão.','Ficção científica');
+INSERT INTO Genero(id_genero,nome,descricao,sub_grupo) VALUES(genero_sequencia.nextval,'Gênero Narrativo','o gênero narrativo o autor estrutura uma história, quase sempre em prosa, que pode se inspirar em eventos reais ou ser apenas de natureza fictícia. Nessa modalidade as cenas se desenrolam de forma consecutiva no espaço e no tempo. Esta modalidade se distingue, estruturalmente, por apresentar uma trama com início, um clímax e uma conclusão.','Horror');
+
+//Tradutor
+CREATE SEQUENCE tradutor_sequencia;
+INSERT INTO Tradutor(id_tradutor,nome) VALUES(tradutor_sequencia.nextval,'');
+
+INSERT INTO Tradutor(id_tradutor,nome) VALUES(tradutor_sequencia.nextval,'Antonio de Macedo Soares');
+INSERT INTO Tradutor(id_tradutor,nome) VALUES(tradutor_sequencia.nextval,'Tradutor A');
+INSERT INTO Tradutor(id_tradutor,nome) VALUES(tradutor_sequencia.nextval,'Tradutor B');
+
+//Grafica
+CREATE SEQUENCE grafica_sequencia;
+INSERT INTO Grafica(id_grafica,nome) VALUES(grafica_sequencia.nextval,'');
+
+INSERT INTO Grafica(id_grafica,nome) VALUES(grafica_sequencia.nextval,'Gráfica A');
+INSERT INTO Grafica(id_grafica,nome) VALUES(grafica_sequencia.nextval,'Gráfica B');
+INSERT INTO Grafica(id_grafica,nome) VALUES(grafica_sequencia.nextval,'Gráfica C');
+
+//Autor
+CREATE SEQUENCE autor_sequencia;
+INSERT INTO Autor(id_autor,data_nascimento,nome,nacionalidade) VALUES(autor_sequencia.nextval,'','','');
+
+INSERT INTO Autor(id_autor,data_nascimento,nome,nacionalidade) VALUES(autor_sequencia.nextval,'01-02-2003','Autor A','Brasileiro');
+INSERT INTO Autor(id_autor,data_nascimento,nome,nacionalidade) VALUES(autor_sequencia.nextval,'02-03-2004','Autor B','Dinamarquês');
+INSERT INTO Autor(id_autor,data_nascimento,nome,nacionalidade) VALUES(autor_sequencia.nextval,'03-04-2005','Autor C','Argentino');
+
+//Dono_Locatario
+CREATE SEQUENCE dono_locatario_sequencia;
+INSERT INTO Dono_Locatario(id_dono_locatario,data_nascimento,nome,tipo_pessoa) VALUES(dono_locatario_sequencia.nextval,'','',);
+
+INSERT INTO Dono_Locatario(id_dono_locatario,data_nascimento,nome,tipo_pessoa) VALUES(dono_locatario_sequencia.nextval,'11-02-2011','Dono A',1);
+INSERT INTO Dono_Locatario(id_dono_locatario,data_nascimento,nome,tipo_pessoa) VALUES(dono_locatario_sequencia.nextval,'22-03-2012','Dono B',1);
+INSERT INTO Dono_Locatario(id_dono_locatario,data_nascimento,nome,tipo_pessoa) VALUES(dono_locatario_sequencia.nextval,'10-10-2010','Locatário A',2);
+INSERT INTO Dono_Locatario(id_dono_locatario,data_nascimento,nome,tipo_pessoa) VALUES(dono_locatario_sequencia.nextval,'20-12-2012','Locatário B',2);
+
+//Livro
+CREATE SEQUENCE livro_sequencia;
+INSERT INTO Livro(id_livro,fisico_ou_digital,nome,volume,ano,lido,preco_pago,qtd_exemplares,numero_impressao,tipo_papel,plataforma,forma_adquirida,data_aquisicao,grafica,tipo,editora,dono) VALUES(livro_sequencia.nextval,,'',,,,,,,'','','','',,,,,);
+
+INSERT INTO Livro(id_livro,fisico_ou_digital,nome,volume,ano,lido,preco_pago,qtd_exemplares,numero_impressao,tipo_papel,plataforma,forma_adquirida,data_aquisicao,grafica,tipo,editora,dono) VALUES(livro_sequencia.nextval,1,'Livro Físico 1',1,2001,1,10,1,1,'Papel A','','','01-01-2001',1,4,1,1);
+INSERT INTO Livro(id_livro,fisico_ou_digital,nome,volume,ano,lido,preco_pago,qtd_exemplares,numero_impressao,tipo_papel,plataforma,forma_adquirida,data_aquisicao,grafica,tipo,editora,dono) VALUES(livro_sequencia.nextval,1,'Livro Físico 2',2,2002,0,20,1,2,'Papel B','','','01-01-0',2,4,1,1);
+INSERT INTO Livro(id_livro,fisico_ou_digital,nome,volume,ano,lido,preco_pago,qtd_exemplares,numero_impressao,tipo_papel,plataforma,forma_adquirida,data_aquisicao,grafica,tipo,editora,dono) VALUES(livro_sequencia.nextval,1,'Livro Físico 3',3,2003,0,0,2,3,'Papel C','','','01-01-0',3,3,1,2);
+INSERT INTO Livro(id_livro,fisico_ou_digital,nome,volume,ano,lido,preco_pago,qtd_exemplares,numero_impressao,tipo_papel,plataforma,forma_adquirida,data_aquisicao,grafica,tipo,editora,dono) VALUES(livro_sequencia.nextval,2,'Livro Digital 1',1,2010,0,0,1,null,'','Plataforma A','Baixado','01-10-2010',null,5,2,1);
+
+//Locacao
+//--não precisa de sequence porque as chaves primárias são compostas de outras chaves primárias existentes
+INSERT INTO Locacao(livro_id,locatario_id,devolveu,data_pegou,data_devolveu) VALUES(,,,'','');
+
+INSERT INTO Locacao(livro_id,locatario_id,devolveu,data_pegou,data_devolveu) VALUES(2,3,1,'01-01-2011','02-01-2011');
+INSERT INTO Locacao(livro_id,locatario_id,devolveu,data_pegou,data_devolveu) VALUES(4,3,0,'02-02-2012','');
+INSERT INTO Locacao(livro_id,locatario_id,devolveu,data_pegou,data_devolveu) VALUES(2,4,0,'03-01-2011','');
+
+//Livro_Tradutor
+//--não precisa de sequence porque as chaves primárias são compostas de outras chaves primárias existentes
+INSERT INTO Livro_Tradutor(livro_id,tradutor_id) VALUES(,);
+
+INSERT INTO Livro_Tradutor(livro_id,tradutor_id) VALUES(2,1);
+INSERT INTO Livro_Tradutor(livro_id,tradutor_id) VALUES(5,2);
+INSERT INTO Livro_Tradutor(livro_id,tradutor_id) VALUES(5,1);
+INSERT INTO Livro_Tradutor(livro_id,tradutor_id) VALUES(6,3);
+
+
+//Livro_Autor
+//--não precisa de sequence porque as chaves primárias são compostas de outras chaves primárias existentes
+INSERT INTO Livro_Autor(livro_id,autor_id) VALUES(,);
+
+INSERT INTO Livro_Autor(livro_id,autor_id) VALUES(4,1);
+INSERT INTO Livro_Autor(livro_id,autor_id) VALUES(2,2);
+INSERT INTO Livro_Autor(livro_id,autor_id) VALUES(5,2);
+INSERT INTO Livro_Autor(livro_id,autor_id) VALUES(6,3);
+
+//Livro_Genero
+//--não precisa de sequence porque as chaves primárias são compostas de outras chaves primárias existentes
+INSERT INTO Livro_Genero(livro_id,genero_id) VALUES(,);
+
+INSERT INTO Livro_Genero(livro_id,genero_id) VALUES(2,4);
+INSERT INTO Livro_Genero(livro_id,genero_id) VALUES(2,7);
+INSERT INTO Livro_Genero(livro_id,genero_id) VALUES(4,6);
+INSERT INTO Livro_Genero(livro_id,genero_id) VALUES(4,7);
+INSERT INTO Livro_Genero(livro_id,genero_id) VALUES(5,2);
+INSERT INTO Livro_Genero(livro_id,genero_id) VALUES(6,1);	//único digital
