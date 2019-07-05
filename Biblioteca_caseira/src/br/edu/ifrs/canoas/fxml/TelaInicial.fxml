@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifrs.canoas.fxml.TelaInicialController">
+    <children>
+        <Button fx:id="adicionarLivroBT" layoutX="21.0" layoutY="433.0" onAction="#addLivro" text="Adicionar livro">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font></Button>
+        <Label fx:id="label" layoutX="206.0" layoutY="64.0" minHeight="16" minWidth="69" text="Quantidade de livros cadastrados:">
+         <font>
+            <Font name="Ebrima" size="14.0" />
+         </font></Label>
+      <Button fx:id="adicionarPessoaBT" layoutX="420.0" layoutY="433.0" mnemonicParsing="false" onAction="#addPessoa" text="Adicionar Pessoa">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font></Button>
+      <Button fx:id="exitBT" layoutX="682.0" layoutY="433.0" mnemonicParsing="false" onAction="#exit" text="Sair">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font></Button>
+      <Label fx:id="qtdLivros" layoutX="428.0" layoutY="67.0" text="qtd. livros.">
+         <font>
+            <Font name="Webdings" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="14.0" text="Biblioteca Caseira">
+         <font>
+            <Font name="Corbel Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="addLocacaoBT" layoutX="535.0" layoutY="433.0" mnemonicParsing="false" onAction="#registrarLocacao" text="Registrar Locação">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font></Button>
+      <TableView fx:id="tabela" layoutX="21.0" layoutY="90.0" prefHeight="328.0" prefWidth="697.0">
+        <columns>
+          <TableColumn fx:id="nomeColuna" prefWidth="247.0" text="Nome livro" />
+          <TableColumn fx:id="anoColuna" prefWidth="48.0" text="Ano" />
+            <TableColumn fx:id="tipoColuna" prefWidth="68.0" text="Tipo" />
+            <TableColumn fx:id="generoColuna" prefWidth="146.0" text="Gênero" />
+            <TableColumn fx:id="donoColuna" prefWidth="187.0" text="Dono" />
+        </columns>
+      </TableView>
+      <Button fx:id="editarLivroBT" layoutX="123.0" layoutY="433.0" mnemonicParsing="false" onAction="#editarLivro" text="Editar livro" visible="false">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font></Button>
+      <Button fx:id="excluirLivroBT" layoutX="206.0" layoutY="433.0" mnemonicParsing="false" onAction="#excluirLivro" text="Excluir livro">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font></Button>
+    </children>
+</AnchorPane>

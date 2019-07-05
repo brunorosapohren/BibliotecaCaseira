@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="587.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="br.edu.ifrs.canoas.fxml.RegistrarLocacaoController">
+   <children>
+      <Label layoutX="192.0" layoutY="14.0" text="Registrar Locação">
+         <font>
+            <Font name="Corbel Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="68.0" text="Locações Vigentes">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="357.0" text="Registrar novas Locações">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="57.0" layoutY="96.0" prefHeight="180.0" prefWidth="505.0">
+        <columns>
+          <TableColumn fx:id="nomeLocatario" prefWidth="179.0" text="Locatário" />
+          <TableColumn fx:id="nomeLivro" prefWidth="227.0" text="Livro" />
+            <TableColumn fx:id="dataPegou" prefWidth="98.0" text="Quando" />
+        </columns>
+      </TableView>
+      <Label layoutX="57.0" layoutY="291.0" text="Para marcar como devolvido, selecione o livro, informe a data e aperte o botão &quot;Devolvido&quot;:" />
+      <Button fx:id="devolvidoBT" layoutX="378.0" layoutY="320.0" mnemonicParsing="false" onAction="#devolverLivro" prefHeight="25.0" prefWidth="87.0" text="Devolvido">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tabelaLivroNovaLocacao" layoutX="59.0" layoutY="413.0" prefHeight="174.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="livrosDisponiveis" prefWidth="199.0" text="Livro" />
+        </columns>
+      </TableView>
+      <Label layoutX="143.0" layoutY="385.0" text="Livro:">
+         <font>
+            <Font name="Georgia" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabelaPessoaNovaLocacao" layoutX="272.0" layoutY="413.0" prefHeight="174.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="pessoaLocataria" prefWidth="199.0" text="Pessoa" />
+         </columns>
+      </TableView>
+      <Label layoutX="323.0" layoutY="385.0" text="Pessoa que pegou:">
+         <font>
+            <Font name="Georgia" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="607.0" text="Quando?">
+         <font>
+            <Font name="Georgia" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dataQuePegou" layoutX="159.0" layoutY="602.0" prefHeight="25.0" prefWidth="243.0" promptText="Data que pegou o livro" />
+      <Button fx:id="registrarLocacaoBT" layoutX="300.0" layoutY="642.0" mnemonicParsing="false" onAction="#registrarLocacao" prefHeight="25.0" prefWidth="144.0" text="Registrar Locação">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelarBT" layoutX="116.0" layoutY="642.0" mnemonicParsing="false" onAction="#voltarMenu" prefHeight="25.0" prefWidth="87.0" text="Cancelar">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="73.0" layoutY="324.0" text="Data devolução:" />
+      <TextField fx:id="dataDevolucao" layoutX="168.0" layoutY="320.0" prefHeight="25.0" prefWidth="170.0" promptText="Data de devolução" />
+   </children>
+</AnchorPane>
